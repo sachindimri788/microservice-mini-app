@@ -17,7 +17,9 @@ app.post("/events", async (req, res) => {
   res.send({ status: "OK" });
 });
 
-app.get("/events", async (req, res) => {});
+app.get("/events", async (req, res) => {
+  res.send(events);
+});
 
 app.listen(4005, () => {
   console.log("listening on 4005 event bus");
